@@ -2,7 +2,7 @@ note
     description : "Internal Root class of the game.%
     			%The content of this file is auto-generated and must not be modified. Every modification will be lost when regenerated."
     generator   : "Eiffel Game2 Project Wizard"
-    date        : "2017-02-15 08:18:55.083 +0000"
+    date        : "2017-02-23 10:16:17.521 +0000"
     revision    : "0.1"
     license     : "CC0"
 
