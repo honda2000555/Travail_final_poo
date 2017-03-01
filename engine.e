@@ -83,7 +83,7 @@ feature {NONE} -- Implementation
 			l_music_loop:AUDIO_SOUND_FILE
 		do
 			create {AUDIO_SOUND_FILE}sound.make ("pew.wav")			-- Son joue lorsque l'usager pese sur la barre d'espace
-			create l_music_loop.make ("loop.flac")		-- Ce son jouera tant que l'application roule.
+			create l_music_loop.make ("bensound-scifi.wav")		-- Ce son jouera tant que l'application roule.
 			audio_library.sources_add
 			music_source:=audio_library.last_source_added
 			audio_library.sources_add
