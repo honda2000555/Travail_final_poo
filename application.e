@@ -1,8 +1,8 @@
 note
-    description : "A game created in Eiffel."
-    author      : ""
+    description : "Un jeu fait en Eiffel."
+    author      : "Charles Magnan"
     generator   : "Eiffel Game2 Project Wizard"
-    date        : "2017-02-15 08:18:55.067 +0000"
+    date        : "2017-03-01 4:05"
     revision    : "0.1"
 
 class

@@ -1,12 +1,8 @@
 note
-	description: "[
-					Our main character.
-					Using animation with 4 states using 3 sub images
-				]"
-	author: "Louis Marchand"
-	date: "Wed, 01 Apr 2015 18:46:46 +0000"
-	revision: "2.0"
-
+	description: "Le joueur. Classe test."
+    author      : "Charles Magnan"
+    date        : "2017-03-01 4:05"
+    revision    : "0.1"
 class
 	PLAYER
 
@@ -19,15 +15,15 @@ inherit
 create
 	default_create
 
-feature {NONE} -- Initialization
+feature {NONE} -- Initialisation
 
 	default_create
-			-- Initialization of `Current'
+			-- Initialisation de «Current»
 		local
 			l_image:IMG_IMAGE_FILE
 		do
 			has_error := False
-			create l_image.make ("gaben.png")
+			create l_image.make ("gaben.png") -- Image temporaire
 			if l_image.is_openable then
 				l_image.open
 				if l_image.is_open then
@@ -50,23 +46,23 @@ feature {NONE} -- Initialization
 		end
 
 	initialize_animation_coordinate
-			-- Create the `animation_coordinates'
+			-- Creer l'«animation_coordinates»
 		do
 			create {ARRAYED_LIST[TUPLE[x,y:INTEGER]]} animation_coordinates.make(4)
-			animation_coordinates.extend ([surface.width // 3, 0])	-- Be sure to place the image standing still first
+			animation_coordinates.extend ([surface.width // 3, 0])
 			animation_coordinates.extend ([0, 0])
 			animation_coordinates.extend ([(surface.width // 3) * 2, 0])
 			animation_coordinates.extend ([0, 0])
 		end
 
-feature -- Access
+feature -- Acces
 
 	has_error:BOOLEAN
-			-- Is an error happen when initializing the `surface'
+			-- Si'l y a une erreur lors de l'initialisation de la surface
 
 	update(a_timestamp:NATURAL_32)
-			-- Update the surface depending on the present `a_timestamp'.
-			-- Each 100 ms, the image change; each 10ms `Current' is moving
+			-- Met la surface a jour dependement de son «a_timestamp»
+			-- Chaque 100 ms, l'image change; chaque 10ms «Current» est en mouvement.
 		local
 			l_coordinate:TUPLE[x,y:INTEGER]
 			l_delta_time:NATURAL_32
