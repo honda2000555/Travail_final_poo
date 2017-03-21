@@ -1,7 +1,7 @@
 note
-	description: "Bouton dans le jeu."
-    author      : "Charles Magnan"
-    date        : "2017-03-01 4:05"
+	description	: "Classe contenant les caractérisitques d'un bouton dans le jeu."
+    author      : "Charles Magnan et David Larouche"
+    date        : "2017-21-03 3:30"
     revision    : "0.1"
 
 class

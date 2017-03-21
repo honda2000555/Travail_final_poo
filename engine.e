@@ -1,8 +1,8 @@
 note
-	description: "L'engin du jeu."
-    author      : "Charles Magnan"
-    date        : "2017-03-01 4:05"
-    revision    : "0.1"
+	description	: "L'engin du jeu."
+	author		: "Charles Magnan et David Larouche"
+    date        : "2017-21-03 3:30"
+    revision    : "0.2"
 
 class
 	ENGINE
@@ -145,7 +145,7 @@ feature {NONE} -- Implementation
 		end
 
 	on_key_released(a_timestamp: NATURAL_32; a_key_state: GAME_KEY_STATE)
-			-- Action lorsqu'une touch du clavier est relachee
+			-- Action lorsqu'une touche du clavier est relachee
 		do
 			if not a_key_state.is_repeat then		-- Etre certain que la touche n'est pas une repetition
 				if a_key_state.is_right then
@@ -157,7 +157,7 @@ feature {NONE} -- Implementation
 		end
 
 	on_key_down_sound(a_timestamp: NATURAL_32; a_key_state: GAME_KEY_STATE)
-
+			-- Action lorsqu'une touche du clavier est pesée.
 		do
 			if a_key_state.is_space and sound.is_open then
 				if sound_source.is_playing then

@@ -1,9 +1,10 @@
 note
-    description : "Un jeu fait en Eiffel."
-    author      : "Charles Magnan"
+    description : "Un jeu fait en Eiffel.%
+    			%Classe servant à initialiser l'engin."
+    author      : "Charles Magnan et David Larouche"
     generator   : "Eiffel Game2 Project Wizard"
-    date        : "2017-03-01 4:05"
-    revision    : "0.1"
+    date        : "2017-21-03 3:30"
+    revision    : "0.2"
 
 class
     APPLICATION

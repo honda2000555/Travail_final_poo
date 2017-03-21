@@ -1,6 +1,6 @@
 note
-	description: "Le joueur. Classe test."
-    author      : "Charles Magnan"
+	description	: "Le joueur. Classe test."
+    author      : "Charles Magnan et David Larouche"
     date        : "2017-03-01 4:05"
     revision    : "0.1"
 class

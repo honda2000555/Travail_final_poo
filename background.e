@@ -1,7 +1,7 @@
 note
-    description: "Le «background» du jeu."
-    author      : "Charles Magnan"
-    date        : "2017-03-01 4:05"
+    description	: "Classe contenant les caractéristiques du fond d'écran du jeu."
+	author		: "Charles Magnan et David Larouche"
+    date        : "2017-21-03 3:30"
     revision    : "0.1"
 
 class

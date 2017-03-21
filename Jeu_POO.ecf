@@ -18,6 +18,7 @@
         <cluster name="Jeu_POO" location=".\" recursive="true">
             <file_rule>
                 <exclude>/EIFGENs$</exclude>
+                <exclude>.git</exclude>
             </file_rule>
         </cluster>
     </target>
