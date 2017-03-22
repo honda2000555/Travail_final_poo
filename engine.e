@@ -23,7 +23,7 @@ feature {NONE} -- Initialisation
 		do
 			create_sound
 			create background
-			create player
+			create player.make
 			create l_window_builder
 
 			l_window_builder.set_title ("Example Animation")

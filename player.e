@@ -1,23 +1,23 @@
 note
-	description	: "Le joueur. Classe test."
+	description	: "Classe contenant les caractéristiques du joueur."
     author      : "Charles Magnan et David Larouche"
-    date        : "2017-03-01 4:05"
-    revision    : "0.1"
+    date        : "2017-22-03 3:30"
+    revision    : "0.2"
 class
 	PLAYER
 
 inherit
 	GAME_LIBRARY_SHARED
-		redefine
-			default_create
-		end
+	MOVABLE
+	TRAITS
+	POSITION
 
 create
-	default_create
+	make
 
 feature {NONE} -- Initialisation
 
-	default_create
+	make
 			-- Initialisation de «Current»
 		local
 			l_image:IMG_IMAGE_FILE
@@ -86,46 +86,6 @@ feature -- Acces
 			end
 		end
 
-	go_left(a_timestamp:NATURAL_32)
-			-- Make `Current' starting to move left
-		do
-			old_timestamp := a_timestamp
-			going_left := True
-		end
-
-	go_right(a_timestamp:NATURAL_32)
-			-- Make `Current' starting to move right
-		do
-			old_timestamp := a_timestamp
-			going_right := True
-		end
-
-	stop_left
-			-- Make `Current' stop moving to the left
-		do
-			going_left := False
-			if not going_right then
-				sub_image_x := animation_coordinates.first.x	-- Place the image standing still
-				sub_image_y := animation_coordinates.first.y	-- Place the image standing still
-			end
-		end
-
-	stop_right
-			-- Make `Current' stop moving to the right
-		do
-			going_right := False
-			if not going_left then
-				sub_image_x := animation_coordinates.first.x	-- Place the image standing still
-				sub_image_y := animation_coordinates.first.y	-- Place the image standing still
-			end
-		end
-
-	going_left:BOOLEAN
-			-- Is `Current' moving left
-
-	going_right:BOOLEAN
-			-- Is `Current' moving right
-
 	x:INTEGER assign set_x
 			-- Vertical position of `Current'
 
@@ -157,6 +117,74 @@ feature -- Acces
 	surface:GAME_SURFACE
 			-- The surface to use when drawing `Current'
 
+feature -- Modifications
+
+	go_up(a_timestamp:NATURAL_32)
+			-- Fait `Current' aller en haut
+		do
+			old_timestamp := a_timestamp
+			going_up := True
+		end
+
+	go_down(a_timestamp:NATURAL_32)
+			-- Fait `Current' aller en bas
+		do
+			old_timestamp := a_timestamp
+			going_down := True
+		end
+
+	go_left(a_timestamp:NATURAL_32)
+			-- Fait `Current' aller a gauche
+		do
+			old_timestamp := a_timestamp
+			going_left := True
+		end
+
+	go_right(a_timestamp:NATURAL_32)
+			-- Fait `Current' aller a droite
+		do
+			old_timestamp := a_timestamp
+			going_right := True
+		end
+
+	stop_up
+			-- Fait `Current' arreter d'aller en haut
+		do
+			going_up := False
+			if not going_down and going_left and going_right then
+				sub_image_x := animation_coordinates.first.x	-- Place the image standing still
+				sub_image_y := animation_coordinates.first.y	-- Place the image standing still
+			end
+		end
+
+	stop_down
+			-- Fait `Current' arreter d'aller en bas
+		do
+			going_down := False
+			if not going_up and going_left and going_right then
+				sub_image_x := animation_coordinates.first.x	-- Place the image standing still
+				sub_image_y := animation_coordinates.first.y	-- Place the image standing still
+			end
+		end
+	stop_left
+			-- Fait `Current' arreter d'aller a gauche
+		do
+			going_left := False
+			if not going_up and going_down and going_left then
+				sub_image_x := animation_coordinates.first.x	-- Place the image standing still
+				sub_image_y := animation_coordinates.first.y	-- Place the image standing still
+			end
+		end
+
+	stop_right
+			-- Fait `Current' arreter d'aller a droite
+		do
+			going_right := False
+			if not going_up and going_down and going_left then
+				sub_image_x := animation_coordinates.first.x	-- Place the image standing still
+				sub_image_y := animation_coordinates.first.y	-- Place the image standing still
+			end
+		end
 feature {NONE} -- implementation
 
 	animation_coordinates:LIST[TUPLE[x,y:INTEGER]]
