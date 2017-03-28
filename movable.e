@@ -94,4 +94,8 @@ feature -- Modifications
 		ensure
 			not_moving_right: going_right = False
 		end
+		
+note
+    copyright: "Copyright (c) 2017, David Larouche and Charles Magnan"
+	license:   "Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"
 end

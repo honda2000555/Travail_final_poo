@@ -40,7 +40,10 @@ feature {NONE} -- Initialisation
 feature -- Acces
 
 	run
+
 			-- Creer les ressources et lancer le jeu
+		require
+			not has_error
 		do
 			player.y := 375
 			player.x := 200
@@ -175,5 +178,8 @@ feature {NONE} -- Implementation
 		do
 			game_library.stop  -- Stop l'application
 		end
+note
+    copyright: "Copyright (c) 2017, David Larouche and Charles Magnan"
+	license:   "Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"
 
 end

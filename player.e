@@ -204,5 +204,7 @@ feature {NONE} -- constants
 	left_surface:GAME_SURFACE
 
 	right_surface:GAME_SURFACE
-
+note
+    copyright: "Copyright (c) 2017, David Larouche and Charles Magnan"
+	license:   "Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"
 end
