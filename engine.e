@@ -23,7 +23,7 @@ feature {NONE} -- Initialisation
 		do
 			create_sound
 			create background
-			create player.make
+			create player.make(1, 1)
 			create l_window_builder
 
 			l_window_builder.set_title ("Example Animation")
@@ -178,6 +178,11 @@ feature {NONE} -- Implementation
 		do
 			game_library.stop  -- Stop l'application
 		end
+
+invariant
+	player_x_in_window: player.x < window.width
+	player_y_in_window: player.y < window.height
+
 note
     copyright: "Copyright (c) 2017, David Larouche and Charles Magnan"
 	license:   "Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"

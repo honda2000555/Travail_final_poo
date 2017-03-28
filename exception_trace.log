@@ -23,3 +23,65 @@ GAME2_APPLICATION   make @1
 GAME2_APPLICATION   root's creation                                     
 <00000000047035A8>                         Routine failure.              Exit
 -------------------------------------------------------------------------------
+
+jeu_poo: system execution failed.
+Following is the set of recorded exceptions:
+
+******************************** Thread exception *****************************
+In thread           Root thread            0x0 (thread id)
+*******************************************************************************
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+PLAYER              _invariant @2          positive_x:                  
+<0000000004649CF8>  (From POSITION)        Class invariant violated.     Fail
+-------------------------------------------------------------------------------
+PLAYER              _invariant                                          
+<0000000004649CF8>  (From POSITION)        Routine failure.              Fail
+-------------------------------------------------------------------------------
+PLAYER              make @20                                            
+<0000000004649CF8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+ENGINE              make @3                                             
+<0000000004647B28>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         make @4                                             
+<00000000046455E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+GAME2_APPLICATION   make @1                                             
+<00000000046455A8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+GAME2_APPLICATION   root's creation                                     
+<00000000046455A8>                         Routine failure.              Exit
+-------------------------------------------------------------------------------
+
+jeu_poo: system execution failed.
+Following is the set of recorded exceptions:
+
+******************************** Thread exception *****************************
+In thread           Root thread            0x0 (thread id)
+*******************************************************************************
+-------------------------------------------------------------------------------
+Class / Object      Routine                Nature of exception           Effect
+-------------------------------------------------------------------------------
+PLAYER              _invariant @2          positive_x:                  
+<00000000048CACF8>  (From POSITION)        Class invariant violated.     Fail
+-------------------------------------------------------------------------------
+PLAYER              _invariant                                          
+<00000000048CACF8>  (From POSITION)        Routine failure.              Fail
+-------------------------------------------------------------------------------
+PLAYER              make @20                                            
+<00000000048CACF8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+ENGINE              make @3                                             
+<00000000048C8B28>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+APPLICATION         make @4                                             
+<00000000048C65E8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+GAME2_APPLICATION   make @1                                             
+<00000000048C65A8>                         Routine failure.              Fail
+-------------------------------------------------------------------------------
+GAME2_APPLICATION   root's creation                                     
+<00000000048C65A8>                         Routine failure.              Exit
+-------------------------------------------------------------------------------

@@ -17,11 +17,13 @@ create
 
 feature {NONE} -- Initialisation
 
-	make
+	make (a_x, a_y :INTEGER_32)
 			-- Initialisation de «Current»
 		local
 			l_image:IMG_IMAGE_FILE
 		do
+			x := a_x
+			y := a_y
 			has_error := False
 			create l_image.make ("gaben.png") -- Image temporaire
 			if l_image.is_openable then
@@ -86,28 +88,6 @@ feature -- Acces
 			end
 		end
 
-	x:INTEGER assign set_x
-			-- Vertical position of `Current'
-
-	y:INTEGER assign set_y
-			-- Horizontal position of `Current'
-
-	set_x(a_x:INTEGER)
-			-- Assign the value of `x' with `a_x'
-		do
-			x := a_x
-		ensure
-			Is_Assign: x = a_x
-		end
-
-	set_y(a_y:INTEGER)
-			-- Assign the value of `y' with `a_y'
-		do
-			y := a_y
-		ensure
-			Is_Assign: y = a_y
-		end
-
 	sub_image_x, sub_image_y:INTEGER
 			-- Position of the portion of image to show inside `surface'
 
@@ -166,6 +146,7 @@ feature -- Modifications
 				sub_image_y := animation_coordinates.first.y	-- Place the image standing still
 			end
 		end
+
 	stop_left
 			-- Fait `Current' arreter d'aller a gauche
 		do
@@ -185,6 +166,7 @@ feature -- Modifications
 				sub_image_y := animation_coordinates.first.y	-- Place the image standing still
 			end
 		end
+
 feature {NONE} -- implementation
 
 	animation_coordinates:LIST[TUPLE[x,y:INTEGER]]
@@ -204,6 +186,9 @@ feature {NONE} -- constants
 	left_surface:GAME_SURFACE
 
 	right_surface:GAME_SURFACE
+
+invariant
+
 note
     copyright: "Copyright (c) 2017, David Larouche and Charles Magnan"
 	license:   "Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"
