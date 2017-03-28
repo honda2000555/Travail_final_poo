@@ -186,7 +186,7 @@ feature {NONE} -- constants
 	left_surface:GAME_SURFACE
 
 	right_surface:GAME_SURFACE
-
+	
 invariant
 
 note

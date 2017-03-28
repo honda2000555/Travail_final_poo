@@ -180,9 +180,9 @@ feature {NONE} -- Implementation
 		end
 
 invariant
-	player_x_in_window: player.x < window.width
-	player_y_in_window: player.y < window.height
-
+	Has_Error_Valid: background.has_error implies has_error
+	Player_in_screen_height:player.y > window.height
+	Player_in_screen_width: player.x > window.width
 note
     copyright: "Copyright (c) 2017, David Larouche and Charles Magnan"
 	license:   "Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"
