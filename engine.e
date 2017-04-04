@@ -176,13 +176,13 @@ feature {NONE} -- Implementation
 	on_quit(a_timestamp: NATURAL_32)
 			-- Methode lance lorsque le signal d'arret
 		do
-			game_library.stop  -- Stop l'application
+			game_library.stop  -- Arrete l'application
 		end
 
 invariant
 	Has_Error_Valid: background.has_error implies has_error
-	Player_in_screen_height:player.y > window.height
-	Player_in_screen_width: player.x > window.width
+	Player_in_screen_height:player.y < window.height
+	Player_in_screen_width: player.x < window.width
 note
     copyright: "Copyright (c) 2017, David Larouche and Charles Magnan"
 	license:   "Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"
