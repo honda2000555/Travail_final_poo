@@ -7,7 +7,7 @@ note
 class
 	POSITION
 
-feature -- Acces
+feature -- Accès
 
 	x:INTEGER assign set_x
 			-- Position en X.

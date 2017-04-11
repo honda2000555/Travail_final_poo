@@ -25,6 +25,7 @@ feature {NONE} -- Initialisation
 			create background
 			create player.make(1, 1)
 			create l_window_builder
+			create map.make
 
 			l_window_builder.set_title ("Example Animation")
 			if not background.has_error then
@@ -45,8 +46,8 @@ feature -- Acces
 		require
 			not has_error
 		do
-			player.y := 375
-			player.x := 200
+			player.y := window.height
+			player.x := window.width
 			game_library.quit_signal_actions.extend (agent on_quit)
 			window.key_pressed_actions.extend (agent on_key_pressed)
 			window.key_released_actions.extend (agent on_key_released)
@@ -76,6 +77,9 @@ feature -- Acces
 
 	sound:AUDIO_SOUND
 			-- Le son
+
+	map:MAP
+			-- La carte contenant les arènes.
 
 
 feature {NONE} -- Implementation
