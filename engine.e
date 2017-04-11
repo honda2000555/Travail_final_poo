@@ -38,7 +38,7 @@ feature {NONE} -- Initialisation
 	iterator:INTEGER
 			--Iterateur.
 
-feature -- Acces
+feature -- Accès
 
 	run
 
@@ -46,8 +46,6 @@ feature -- Acces
 		require
 			not has_error
 		do
-			player.y := window.height
-			player.x := window.width
 			game_library.quit_signal_actions.extend (agent on_quit)
 			window.key_pressed_actions.extend (agent on_key_pressed)
 			window.key_released_actions.extend (agent on_key_released)

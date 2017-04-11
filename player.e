@@ -1,16 +1,16 @@
 note
 	description	: "Classe contenant les caractéristiques du joueur."
     author      : "Charles Magnan et David Larouche"
-    date        : "2017-22-03 3:30"
-    revision    : "0.2"
+    date        : "2017-04-11 3:30"
+    revision    : "0.3"
 class
 	PLAYER
 
 inherit
 	GAME_LIBRARY_SHARED
+	DRAWABLE
 	MOVABLE
-	TRAITS
-	POSITION
+	-- TRAITS
 
 create
 	make
@@ -57,7 +57,7 @@ feature {NONE} -- Initialisation
 			animation_coordinates.extend ([0, 0])
 		end
 
-feature -- Acces
+feature -- Accès
 
 	has_error:BOOLEAN
 			-- Si'l y a une erreur lors de l'initialisation de la surface
@@ -132,8 +132,8 @@ feature -- Modifications
 		do
 			going_up := False
 			if not going_down and going_left and going_right then
-				sub_image_x := animation_coordinates.first.x	-- Place the image standing still
-				sub_image_y := animation_coordinates.first.y	-- Place the image standing still
+				sub_image_x := animation_coordinates.first.x
+				sub_image_y := animation_coordinates.first.y
 			end
 		end
 
@@ -142,8 +142,8 @@ feature -- Modifications
 		do
 			going_down := False
 			if not going_up and going_left and going_right then
-				sub_image_x := animation_coordinates.first.x	-- Place the image standing still
-				sub_image_y := animation_coordinates.first.y	-- Place the image standing still
+				sub_image_x := animation_coordinates.first.x
+				sub_image_y := animation_coordinates.first.y
 			end
 		end
 
@@ -152,8 +152,8 @@ feature -- Modifications
 		do
 			going_left := False
 			if not going_up and going_down and going_left then
-				sub_image_x := animation_coordinates.first.x	-- Place the image standing still
-				sub_image_y := animation_coordinates.first.y	-- Place the image standing still
+				sub_image_x := animation_coordinates.first.x
+				sub_image_y := animation_coordinates.first.y
 			end
 		end
 
@@ -162,31 +162,11 @@ feature -- Modifications
 		do
 			going_right := False
 			if not going_up and going_down and going_left then
-				sub_image_x := animation_coordinates.first.x	-- Place the image standing still
-				sub_image_y := animation_coordinates.first.y	-- Place the image standing still
+				sub_image_x := animation_coordinates.first.x
+				sub_image_y := animation_coordinates.first.y
 			end
 		end
 
-feature {NONE} -- implementation
-
-	animation_coordinates:LIST[TUPLE[x,y:INTEGER]]
-			-- Every coordinate of portion of images in `surface'
-
-	old_timestamp:NATURAL_32
-			-- When appen the last movement (considering `movement_delta')
-
-feature {NONE} -- constants
-
-	movement_delta:NATURAL_32 = 10
-			-- The delta time between each movement of `Current'
-
-	animation_delta:NATURAL_32 = 100
-			-- The delta time between each animation of `Current'
-
-	left_surface:GAME_SURFACE
-
-	right_surface:GAME_SURFACE
-	
 invariant
 
 note
