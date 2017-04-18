@@ -1,6 +1,6 @@
 note
 	description	: "Classe contenant les caractéristiques d'un projectile."
-	author		: "Charles Magnan et David Larouche"
+	auteur		: "Charles Magnan et David Larouche"
     date        : "2017-04-04 3:55"
     revision    : "0.2"
 

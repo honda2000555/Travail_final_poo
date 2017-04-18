@@ -1,6 +1,6 @@
 note
 	description	: "Classe contenant les caractéristiques du joueur."
-    author      : "Charles Magnan et David Larouche"
+    auteur      : "Charles Magnan et David Larouche"
     date        : "2017-04-11 3:30"
     revision    : "0.3"
 class

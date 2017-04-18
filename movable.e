@@ -1,6 +1,6 @@
 note
 	description	: "Classe abstraite héritée par les classes d'objet déplaceable."
-	author		: "Charles Magnan et David Larouche"
+	auteur		: "Charles Magnan et David Larouche"
     date        : "2017-22-03 3:30"
     revision    : "0.1"
 

@@ -1,6 +1,6 @@
 note
 	description	: "Classe contenant les différents caractéristiques de «Current»."
-	author		: "Charles Magnan et David Larouche"
+	auteur		: "Charles Magnan et David Larouche"
     date        : "2017-21-03 3:30"
     revision    : "0.1"
 

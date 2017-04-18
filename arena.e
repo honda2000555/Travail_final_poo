@@ -1,6 +1,6 @@
 note
 	description	: "Classe contenant les caractéristiques d'une arène."
-	author		: "Charles Magnan et David Larouche"
+	auteur		: "Charles Magnan et David Larouche"
     date        : "2017-05-04 2:30"
     revision    : "0.2"
 
