@@ -1,6 +1,6 @@
 note
 	description	: "L'engin du jeu."
-	author		: "Charles Magnan et David Larouche"
+	auteur		: "Charles Magnan et David Larouche"
     date        : "2017-21-03 3:30"
     revision    : "0.2"
 
@@ -17,7 +17,7 @@ create
 feature {NONE} -- Initialisation
 
 	make
-			-- Initialisation de «Current»
+			-- Initialisation de `Current'
 		local
 			l_window_builder:GAME_WINDOW_SURFACED_BUILDER
 		do
