@@ -19,6 +19,9 @@ feature {NONE} -- Initialisation
 
 	make (a_x, a_y :INTEGER_32)
 			-- Initialisation de «Current»
+		require
+			x_positif: x>=0
+			y_positif: y>=0
 		local
 			l_image:IMG_IMAGE_FILE
 		do

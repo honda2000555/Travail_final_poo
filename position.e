@@ -20,7 +20,7 @@ feature -- Modifications
 	set_x(a_x:INTEGER)
 			-- Assign the value of `x' with `a_x'
 		require
-			positive_a_x: a_x > 0
+			positive_a_x: a_x >= 0
 		do
 			x := a_x
 		ensure
@@ -30,7 +30,7 @@ feature -- Modifications
 	set_y(a_y:INTEGER)
 			-- Assign the value of `y' with `a_y'
 		require
-			positive_a_y: a_y > 0
+			positive_a_y: a_y >= 0
 		do
 			y := a_y
 		ensure
@@ -39,8 +39,8 @@ feature -- Modifications
 
 
 invariant
-	positive_x: x > 0
-	positive_y: y > 0
+	positive_x: x >= 0
+	positive_y: y >= 0
 note
     copyright: "Copyright (c) 2017, David Larouche and Charles Magnan"
 	license:   "Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"
