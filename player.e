@@ -117,6 +117,9 @@ feature -- Modifications
 			-- Fait `Current' aller a gauche
 		do
 			old_timestamp := a_timestamp
+			if going_right  then
+				stop_right
+			end
 			going_left := True
 		end
 
@@ -124,6 +127,9 @@ feature -- Modifications
 			-- Fait `Current' aller a droite
 		do
 			old_timestamp := a_timestamp
+			if going_left  then
+				stop_left
+			end
 			going_right := True
 		end
 

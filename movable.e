@@ -65,7 +65,7 @@ feature -- Modifications
 			moving_up: going_up
 		deferred
 		ensure
-			not_moving_up: nor= not going_up
+			not_moving_up: not going_up
 		end
 
 	stop_down

@@ -23,6 +23,7 @@ feature {NONE} -- Initialisation
             -- Lance l'engin.
     	local
     		l_engine:ENGINE
+    		
         do
         	game_library.enable_video
         	image_file_library.enable_image (true, false, false)

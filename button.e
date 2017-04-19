@@ -9,31 +9,30 @@ class
 
 inherit
 	GAME_SURFACE
-		redefine
-			default_create
-		end
-
+	rename
+		make as make_Game_Surface
+	end
 create
-	default_create
+	make
 
 feature {NONE} -- Initialisation
 
-	default_create
+	make(nom_image:STRING)
 		local
 			l_image: IMG_IMAGE_FILE
 		do
-			create l_image.make ("jouer.png")
+			create l_image.make (nom_image+".png")
 			if l_image.is_openable then
 				l_image.open
 				if l_image.is_open then
 					make_from_image (l_image)
 				else
 					has_error := True
-					make(1,1)
+					make_Game_Surface(1,1)
 				end
 			else
 				has_error := True
-				make(1,1)
+				make_Game_Surface(1,1)
 			end
 		end
 note
