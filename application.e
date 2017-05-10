@@ -1,7 +1,7 @@
 note
     description : "Un jeu fait en Eiffel.%
     			%Classe servant à initialiser l'engin."
-    auteur      : "Charles Magnan et David Larouche"
+    auteur      : " David Larouche"
     generator   : "Eiffel Game2 Project Wizard"
     date        : "2017-21-03 3:30"
     revision    : "0.2"
@@ -23,7 +23,7 @@ feature {NONE} -- Initialisation
             -- Lance l'engin.
     	local
     		l_engine:ENGINE
-    		
+
         do
         	game_library.enable_video
         	image_file_library.enable_image (true, false, false)
@@ -35,7 +35,7 @@ feature {NONE} -- Initialisation
         end
 
 note
-    copyright: "Copyright (c) 2017, David Larouche and Charles Magnan"
+    copyright: "Copyright (c) 2017, David Larouche "
 	license:   "Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"
 
 end

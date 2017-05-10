@@ -1,6 +1,6 @@
 note
 	description	: "Classe héritée par les classes d'objet ayant un position."
-	auteur		: "Charles Magnan et David Larouche"
+	auteur		: "David Larouche"
     date        : "2017-21-03 3:30"
     revision    : "0.1"
 
@@ -42,6 +42,6 @@ invariant
 	positive_x: x >= 0
 	positive_y: y >= 0
 note
-    copyright: "Copyright (c) 2017, David Larouche and Charles Magnan"
+    copyright: "Copyright (c) 2017, David Larouche "
 	license:   "Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"
 end

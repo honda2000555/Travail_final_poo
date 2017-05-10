@@ -1,6 +1,6 @@
 note
 	description	: "Classe contenant les caractéristiques d'un projectile."
-	auteur		: "Charles Magnan et David Larouche"
+	auteur		: "David Larouche"
     date        : "2017-04-04 3:55"
     revision    : "0.2"
 
@@ -29,6 +29,6 @@ feature --???
 	end
 
 note
-    copyright: "Copyright (c) 2017, David Larouche and Charles Magnan"
+    copyright: "Copyright (c) 2017, David Larouche "
 	license:   "Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"
 end

@@ -1,6 +1,6 @@
 note
 	description	: "Classe contenant les caractéristiques d'une arène."
-	auteur		: "Charles Magnan et David Larouche"
+	auteur		: "David Larouche"
     date        : "2017-05-04 2:30"
     revision    : "0.2"
 
@@ -9,6 +9,6 @@ class
 
 
 note
-    copyright: "Copyright (c) 2017, David Larouche and Charles Magnan"
+    copyright: "Copyright (c) 2017, David Larouche "
 	license:   "Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"
 end

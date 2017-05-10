@@ -1,6 +1,6 @@
 note
 	description: "Classe servant à créer des ennemies."
-	author		: "Charles Magnan et David Larouche"
+	author		: "David Larouche"
     date        : "2017-04-11 3:30"
     revision    : "0.0"
 

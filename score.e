@@ -1,6 +1,6 @@
 note
 	description	: "Se connecte au server pour aller cherché les score."
-	auteur		: "Charles Magnan et David Larouche"
+	auteur		: "David Larouche"
     date        : "2017-19-04 15:37"
     revision    : "0.1"
 

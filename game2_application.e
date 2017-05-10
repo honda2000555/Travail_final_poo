@@ -37,7 +37,7 @@ feature {NONE} -- Initialization
 
         end
 note
-    copyright: "Copyright (c) 2017, David Larouche and Charles Magnan"
+    copyright: "Copyright (c) 2017, David Larouche "
 	license:   "Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"
 
 

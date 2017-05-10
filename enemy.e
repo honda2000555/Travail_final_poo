@@ -1,6 +1,6 @@
 note
 	description	: "Classe contenant les caractéristiques d'un ennemie."
-    author      : "Charles Magnan et David Larouche"
+    author      : "David Larouche"
     date        : "2017-04-11 3:30"
     revision    : "0.1"
 class

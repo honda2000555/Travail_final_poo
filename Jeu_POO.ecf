@@ -25,6 +25,7 @@
 				<exclude>.git</exclude>
 				<exclude>/EIFGENs$</exclude>
 				<exclude>/tests$</exclude>
+				<exclude>/Serveur$</exclude>
 			</file_rule>
 		</cluster>
 	</target>
