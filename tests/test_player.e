@@ -148,44 +148,44 @@ feature -- Test routines
 			assert ("Test_stop_going_left", not l_movable.going_left)
 		end
 
-		Test_stop_going_right
-				-- Test_stop_going_right
-			note
-				testing:  "execution/isolated"
-			local
-				l_movable:PLAYER
-			do
-				create l_movable.make (50, 50)
-				l_movable.go_right (0)
-				l_movable.stop_right
-				assert ("Test_stop_going_right", not l_movable.going_right)
-			end
+	Test_stop_going_right
+			-- Test_stop_going_right
+		note
+			testing:  "execution/isolated"
+		local
+			l_movable:PLAYER
+		do
+			create l_movable.make (50, 50)
+			l_movable.go_right (0)
+			l_movable.stop_right
+			assert ("Test_stop_going_right", not l_movable.going_right)
+		end
 
-			Test_stop_going_up
-					-- Test_stop_going_up
-				note
-					testing:  "execution/isolated"
-				local
-					l_movable:PLAYER
-				do
-					create l_movable.make (50, 50)
-					l_movable.go_up (0)
-					l_movable.stop_up
-					assert ("Test_stop_going_up", not l_movable.going_up)
-				end
+	Test_stop_going_up
+			-- Test_stop_going_up
+		note
+			testing:  "execution/isolated"
+		local
+			l_movable:PLAYER
+		do
+			create l_movable.make (50, 50)
+			l_movable.go_up (0)
+			l_movable.stop_up
+			assert ("Test_stop_going_up", not l_movable.going_up)
+		end
 
-				Test_stop_going_down
-						-- Test_stop_going_down
-					note
-						testing:  "execution/isolated"
-					local
-						l_movable:PLAYER
-					do
-						create l_movable.make (50, 50)
-						l_movable.go_down (0)
-						l_movable.stop_down
-						assert ("Test_stop_going_down", not l_movable.going_down)
-					end
+	Test_stop_going_down
+			-- Test_stop_going_down
+		note
+			testing:  "execution/isolated"
+		local
+			l_movable:PLAYER
+		do
+			create l_movable.make (50, 50)
+			l_movable.go_down (0)
+			l_movable.stop_down
+			assert ("Test_stop_going_down", not l_movable.going_down)
+		end
 
 
 end

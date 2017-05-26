@@ -13,23 +13,24 @@ inherit
 feature {NONE} -- implémentation
 
 	animation_coordinates:LIST[TUPLE[x,y:INTEGER]]
-			-- Every coordinate of portion of images in `surface'
+			-- Chaque coordonnée de la portion de l'image dans `surface'
 
 	old_timestamp:NATURAL_32
-			-- When happen the last movement (considering `movement_delta')
+			--Quand le dernier mouvement est arrivé considérant `movement_delta'
 
 feature {NONE} -- constantes
 
 	movement_delta:NATURAL_32 = 10
-			-- The delta time between each movement of `Current'
+			-- Le temps delta entre chaque mouvement de `Current'
 
 	animation_delta:NATURAL_32 = 100
-			-- The delta time between each animation of `Current'
+			-- Le temps delta entre chaque mouvement de `Current'
 
 	left_surface:GAME_SURFACE
-
+		-- les différentre surface de gauche
+		
 	right_surface:GAME_SURFACE
-
+		-- les différentre surface de droite
 invariant
 
 note

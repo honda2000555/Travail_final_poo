@@ -10,7 +10,6 @@ inherit
 	GAME_LIBRARY_SHARED
 	DRAWABLE
 	MOVABLE
-	-- TRAITS
 
 create
 	make
@@ -28,13 +27,13 @@ feature {NONE} -- Initialisation
 			x := a_x
 			y := a_y
 			has_error := False
-			create l_image.make ("gaben.png") -- Image temporaire
+			create l_image.make ("spacestation1.png") -- Image temporaire
 			if l_image.is_openable then
 				l_image.open
 				if l_image.is_open then
 					create right_surface.make_from_image (l_image)
 					create {GAME_SURFACE_ROTATE_ZOOM} left_surface.make_zoom_x_y (right_surface, -1, 1, True)
-					sub_image_width := right_surface.width // 3
+					sub_image_width := right_surface.width
 					sub_image_height := right_surface.height
 				else
 					has_error := False
@@ -54,9 +53,9 @@ feature {NONE} -- Initialisation
 			-- Creer l'«animation_coordinates»
 		do
 			create {ARRAYED_LIST[TUPLE[x,y:INTEGER]]} animation_coordinates.make(4)
-			animation_coordinates.extend ([surface.width // 3, 0])
+			animation_coordinates.extend ([surface.width, 0])
 			animation_coordinates.extend ([0, 0])
-			animation_coordinates.extend ([(surface.width // 3) * 2, 0])
+			animation_coordinates.extend ([(surface.width ) * 2, 0])
 			animation_coordinates.extend ([0, 0])
 		end
 
@@ -71,6 +70,8 @@ feature -- Accès
 		local
 			l_coordinate:TUPLE[x,y:INTEGER]
 			l_delta_time:NATURAL_32
+			l_x : INTEGER_32
+			l_y : INTEGER_32
 		do
 			if going_left or going_right then
 				l_coordinate := animation_coordinates.at ((((a_timestamp // animation_delta) \\
@@ -78,17 +79,49 @@ feature -- Accès
 				sub_image_x := l_coordinate.x
 				sub_image_y := l_coordinate.y
 				l_delta_time := a_timestamp - old_timestamp
-				if l_delta_time // movement_delta > 0 then
-					if going_right then
-						surface := right_surface
-						x := x + (l_delta_time // movement_delta).to_integer_32
+				if going_right then
+					surface := right_surface
+					l_x := x + (l_delta_time // movement_delta).to_integer_32
+					if l_x > 1266 then
+					x := 1266
 					else
-						surface := left_surface
-						x := x - (l_delta_time // movement_delta).to_integer_32
+						x:=l_x
 					end
-					old_timestamp := old_timestamp + (l_delta_time // movement_delta) * movement_delta
+				else
+					surface := left_surface
+					l_x :=  x - (l_delta_time // movement_delta).to_integer_32
+					if l_x < 0 then
+						x := 0
+					else
+						x := l_x
+					end
 				end
 			end
+			if going_down or going_up then
+				l_coordinate := animation_coordinates.at ((((a_timestamp // animation_delta) \\
+												animation_coordinates.count.to_natural_32) + 1).to_integer_32)
+				sub_image_x := l_coordinate.x
+				sub_image_y := l_coordinate.y
+				l_delta_time := a_timestamp - old_timestamp
+				if going_down then
+					surface := right_surface
+					l_y := y + (l_delta_time // movement_delta).to_integer_32
+					if l_y > 667 then
+					y := 667
+					else
+						y:=l_y
+					end
+				else
+					surface := left_surface
+					l_y :=  y - (l_delta_time // movement_delta).to_integer_32
+					if l_y < 0 then
+						y := 0
+					else
+						y := l_y
+					end
+				end
+			end
+			old_timestamp := a_timestamp
 		end
 
 	sub_image_x, sub_image_y:INTEGER

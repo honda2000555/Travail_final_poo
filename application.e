@@ -13,7 +13,7 @@ inherit
 	GAME_LIBRARY_SHARED
 	IMG_LIBRARY_SHARED
 	AUDIO_LIBRARY_SHARED
-
+	TEXT_LIBRARY_SHARED
 create
     make
 
@@ -28,6 +28,7 @@ feature {NONE} -- Initialisation
         	game_library.enable_video
         	image_file_library.enable_image (true, false, false)
         	audio_library.enable_sound
+        	text_library.enable_text
         	create l_engine.make
 			if not l_engine.has_error then
 				l_engine.run
